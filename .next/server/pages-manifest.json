@@ -1,8 +1,0 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/api/test1": "pages/api/test1.js",
-  "/": "pages/index.js",
-  "/api/test2": "pages/api/test2.js"
-}
