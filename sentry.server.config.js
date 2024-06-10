@@ -2,13 +2,18 @@
 // The config you add here will be used whenever the server handles a request.
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
-import * as Sentry from '@sentry/nextjs'
+import * as Sentry from "@sentry/nextjs";
 
-const SENTRY_DSN = "http://3f78f8ed60a34a8a8adba5672e33deb8@localhost:9000/2"
 Sentry.init({
-  dsn: SENTRY_DSN,
-  tracesSampleRate: 1.0,
-  // Note: if you want to override the automatic release value, do not set a
-  // `release` value here - use the environment variable `SENTRY_RELEASE`, so
-  // that it will also get attached to your source maps
-})
+  dsn: "http://08c98deed9c90a8b3061095f78d7fa53@localhost:9000/2",
+
+  // Adjust this value in production, or use tracesSampler for greater control
+  tracesSampleRate: 1,
+
+  // Setting this option to true will print useful information to the console while you're setting up Sentry.
+  debug: false,
+
+  // Uncomment the line below to enable Spotlight (https://spotlightjs.com)
+  // spotlight: process.env.NODE_ENV === 'development',
+  
+});
